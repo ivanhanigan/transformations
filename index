@@ -1,0 +1,15 @@
+digraph transformations {
+t1 [ shape=record, label="{{ {description|notes} | {the thing|...} }}" , URL="START\NEND" ]
+t1 [ shape=record, label="{{ {description|notes} | {the thing|...} }}" , URL="START\NEND" ]
+ds1 [ label="the thing before" ]
+ds1 -> t1
+ds2 [ label="another thing" ]
+ds2 -> t1
+ds3 [ label="the next thing" ]
+t1 -> ds3
+t2 [ shape=record, label="{{ {description|notes} | {yet another thing|this is a note} }}" , URL="START\NEND" ]
+t2 [ shape=record, label="{{ {description|notes} | {yet another thing|this is a note} }}" , URL="START\NEND" ]
+ds3 -> t2
+ds4 [ label="a final thing" ]
+t2 -> ds4
+}

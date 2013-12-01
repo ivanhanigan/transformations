@@ -1,0 +1,21 @@
+
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, "transformation", 'width=800,height=480,scrollbars=yes');
+return false;
+}
+//-->
+</SCRIPT>
+<map id="transformations" name="transformations">
+<area shape="rect" id="node1" onClick=popup("index_files/t1.txt") title="{{ {description|notes} | {the thing|...} }}" alt="" coords="135,105,364,175"/>
+<area shape="rect" id="node8" onClick=popup("index_files/t2.txt") title="{{ {description|notes} | {yet another thing|this is a note} }}" alt="" coords="96,323,403,394"/>
+</map>
+<IMG SRC="index_files/index.jpg" USEMAP="#transformations" />
